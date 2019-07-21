@@ -1,13 +1,17 @@
- var path = require('path');
- var webpack = require('webpack');
+﻿const webpack = require('webpack');
+const path = require('path');
+const autoprefixer = require('autoprefixer');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
- module.exports =[{
+module.exports = [
+    {
         entry: {
-            global: './src/Index.tsx'
+            global: './app/index.tsx'
         },
         output: {
-            filename: 'bundle.js',
-            path: __dirname + '/static/'
+            filename: 'global-bundle.js',
+            path: __dirname + '/app/'
         },
         devtool: 'source-map',
         resolve: {
@@ -42,4 +46,5 @@
                 Promise: 'es6-promise'
             })
         ]
-}];
+    }
+];

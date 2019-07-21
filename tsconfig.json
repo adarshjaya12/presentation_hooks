@@ -1,25 +1,18 @@
-{
+﻿{
   "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
     "target": "es5",
-    "allowJs": true,
-    "skipLibCheck": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ]
+    "jsx": "react",
+    "experimentalDecorators": true,
+	"allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "skipLibCheck": true
   },
-  "include": [
-    "src"
-  ]
+  "exclude": [
+    "node_modules",
+    "**/library-app/*"
+  ],
+  "compileOnSave": true
 }
